@@ -1,0 +1,19 @@
+S1 = input('Enter hour:')
+try:
+   h = int(S1)
+except:
+   h = -1
+if h < 0:
+   print('invalid hour ')
+S2 = input('Enter rate:')
+try:
+   r = int(S2)
+except:
+   r = -1
+if r < 0:
+   print('invalid rate')
+if h <= 40:
+   t = r * h
+else:
+   t = 40 * r + h-40 + 4.5*r
+print('pay:',t)
