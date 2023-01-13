@@ -1,0 +1,19 @@
+def ktra(prompt):
+   s = input(prompt)
+   flag = 0
+   while flag == 0:
+     try:
+       n = int(s)
+     except:
+        print("Enter numeric input!!!")
+        s = input(prompt)
+     else:
+        flag = 1
+   return n
+h = ktra("Enter Hour:")
+r = ktra("Enter Rate:")
+if h <= 40:
+   t = r * h
+else:
+   t = 40 * r + h-40 + 4.5*r
+print('pay:',t)
